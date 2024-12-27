@@ -7,7 +7,7 @@ import '../styles/global.css';
 const { pageTitle } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="bg-background-50 text-text-950">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -15,10 +15,10 @@ const { pageTitle } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
-	<body>
+	<body class="mx-auto my-0 p-4">
 
 		<Header />
-		<h1>{pageTitle}</h1>
+		<h1 class="text-5xl m-4 my-10">{pageTitle}</h1>
         <slot />
 		<Footer />
 		<script>
