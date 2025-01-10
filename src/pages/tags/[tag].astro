@@ -18,8 +18,10 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+const PageColour = "teal";
 ---
-<BaseLayout pageTitle=`Posts tagged with ${tag}`>
+
+<BaseLayout pageTitle=`Posts tagged with ${tag}` PageColour={PageColour}>
   <ul>
     {posts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description}/>)}
   </ul>
