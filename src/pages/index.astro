@@ -2,8 +2,10 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting';
 const pageTitle = 'My gamer Astro Site';
+const PageColour = "mauve";
+
 ---
-	<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
 		<h2 class="text-3xl my-2">eat my fat kunucks</h2>
 		<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 	</BaseLayout>
