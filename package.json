@@ -12,8 +12,12 @@
     "@astrojs/preact": "^4.0.1",
     "@astrojs/rss": "^4.0.10",
     "@astrojs/tailwind": "^5.1.4",
+    "@catppuccin/palette": "^1.7.1",
     "astro": "^5.1.1",
     "preact": "^10.25.1",
     "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@catppuccin/tailwindcss": "^0.1.6"
   }
 }
