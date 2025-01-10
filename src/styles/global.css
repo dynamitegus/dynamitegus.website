@@ -8,11 +8,12 @@
 @layer base {
   :root {
     --rosewater: var(--ctp-latte-rosewater);
-    --flamingo: var(--ctp-latte-flamigo);
+    --flamingo: var(--ctp-latte-flamingo);
     --pink: var(--ctp-latte-pink);
     --mauve: var(--ctp-latte-mauve);
     --red: var(--ctp-latte-red);
     --maroon: var(--ctp-latte-maroon);
+    --peach: var(--ctp-latte-peach);
     --yellow: var(--ctp-latte-yellow);
     --green: var(--ctp-latte-green);
     --teal: var(--ctp-latte-teal);
@@ -36,11 +37,12 @@
     }
   .dark {
     --rosewater: var(--ctp-mocha-rosewater);
-    --flamingo: var(--ctp-mocha-flamigo);
+    --flamingo: var(--ctp-mocha-flamingo);
     --pink: var(--ctp-mocha-pink);
     --mauve: var(--ctp-mocha-mauve);
     --red: var(--ctp-mocha-red);
     --maroon: var(--ctp-mocha-maroon);
+    --peach: var(--ctp-mocha-peach);
     --yellow: var(--ctp-mocha-yellow);
     --green: var(--ctp-mocha-green);
     --teal: var(--ctp-mocha-teal);
