@@ -32,8 +32,8 @@
     --base: var(--ctp-latte-base);
     --mantle: var(--ctp-latte-mantle);
     --crust: var(--ctp-latte-crust);
-
-  }
+    --accent: var(--pink);
+    }
   .dark {
     --rosewater: var(--ctp-mocha-rosewater);
     --flamingo: var(--ctp-mocha-flamigo);
@@ -60,6 +60,7 @@
     --base: var(--ctp-mocha-base);
     --mantle: var(--ctp-mocha-mantle);
     --crust: var(--ctp-mocha-crust);
+    --accent: var(--pink);
   }
 }
 
