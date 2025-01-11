@@ -4,13 +4,15 @@ import BlogPost from '../components/BlogPost.astro';
 const allPosts = await Astro.glob('./posts/*.md');
 const pageTitle = 'Blog';
 const PageColour = "peach";
+
+const sortedPosts = allPosts.sort((a, b) => {
+	return new Date(b.frontmatter.pubdate).valueOf() - new Date(a.frontmatter.pubdate).valueOf();
+});
 ---
   <BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
-		    <h1>My Astro Site</h1>
-    <h1>My Astro Learning Blog</h1>
-    <p>This is where I will post about my journey learning Astro.</p>
+    <p>here is list of blog posts<br> go wild</p>
 
     <ul>
-      {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+      {sortedPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} pubdate={post.frontmatter.pubDate}/>)}
     </ul>
 	</BaseLayout>

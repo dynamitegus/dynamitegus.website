@@ -2,9 +2,20 @@
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 const PageColour = "peach";
+
+const dateOptions: object = {
+	year: "2-digit",
+	month: "numeric",
+	day: "numeric",
+};
+
+const formattedPublishDate = new Date(frontmatter.pubdate).toLocaleDateString("en-US", dateOptions);
+
+
+
 ---
 <BaseLayout pageTitle={frontmatter.title} PageColour={PageColour}>
-<p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
+<p>Published on: {formattedPublishDate}</p>
 <p>Written by {frontmatter.author}</p>
 <div class="tags">
     {frontmatter.tags.map((tag: unknown) => (
