@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
-const allPosts = await Astro.glob('./posts/*.md');
+import { getCollection } from "astro:content";
 const pageTitle = 'Blog';
 const PageColour = "peach";
 
+//const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const allPosts = await getCollection("blog");
 const sortedPosts = allPosts.sort((a, b) => {
 	return new Date(b.frontmatter.pubdate).valueOf() - new Date(a.frontmatter.pubdate).valueOf();
 });
@@ -13,6 +15,6 @@ const sortedPosts = allPosts.sort((a, b) => {
     <p>here is list of blog posts<br> go wild</p>
 
     <ul>
-      {sortedPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} pubdate={post.frontmatter.pubDate}/>)}
+      {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} pubdate={post.frontmatter.pubDate}/>)}
     </ul>
 	</BaseLayout>
