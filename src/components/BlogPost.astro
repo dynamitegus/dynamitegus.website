@@ -1,6 +1,23 @@
 ---
-const { title, url, description } = Astro.props;
+const { title, url, description, pubDate, id } = Astro.props;
+
+const dateOptions: object = {
+	year: "numeric",
+	month: "long",
+	day: "numeric",
+};
+
+const formattedPublishDate = new Date(pubDate).toLocaleDateString("en-US", dateOptions);
 ---
-<li class="ml-10 border-accent-500 border-solid border-4 rounded-lg"><a class="text-2xl" href={url}>{title}<p class="text-sm pl-10">{description}</p></a></li>
+<a href={`/posts/${id}/`} class="hover:text-subtext0 p-8">
+    <div>
+        <li>
+
+            <div class="text-sm py-4 text-overlay2">{formattedPublishDate}</div>
+            <div class="text-4xl pb-3">{title}</div>
+            <div>{description}</div>
+        </li>
+    </div>
+</a>
 
 
