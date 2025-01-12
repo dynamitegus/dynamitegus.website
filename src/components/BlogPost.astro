@@ -1,5 +1,5 @@
 ---
-const { title, url, description, pubDate } = Astro.props;
+const { title, url, description, pubDate, id } = Astro.props;
 
 const dateOptions: object = {
 	year: "numeric",
@@ -9,7 +9,7 @@ const dateOptions: object = {
 
 const formattedPublishDate = new Date(pubDate).toLocaleDateString("en-US", dateOptions);
 ---
-<a href={url} class="hover:text-subtext0 p-8">
+<a href={`/posts/${id}/`} class="hover:text-subtext0 p-8">
     <div>
         <li>
 

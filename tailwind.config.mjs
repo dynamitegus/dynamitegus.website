@@ -44,6 +44,7 @@ export default {
 			// which flavour of colours to use by default, in the `:root`
 			defaultFlavour: "mocha",
 		  }),
+		  require('@tailwindcss/typography'),
 	],
 
 	   

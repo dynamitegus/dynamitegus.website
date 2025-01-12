@@ -14,6 +14,6 @@ const sortedPosts = allPosts.sort((a, b) => {
   <BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
     <p>here is list of blog posts<br> go wild</p>
     <ul>
-      {sortedPosts.map((post) => <BlogPost url={post.url} title={post.data.title} description={post.data.description} pubDate={Date.parse(post.data.pubDate)}/>)}
+      {sortedPosts.map((post) => <BlogPost id={post.id} title={post.data.title} description={post.data.description} pubDate={Date.parse(post.data.pubDate)}/>)}
     </ul>
 	</BaseLayout>
