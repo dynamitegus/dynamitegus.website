@@ -16,6 +16,6 @@ const sortedPosts = allPosts.sort((a, b) => {
     <p>{allPosts.map((post) => <span>{post.data.title} </span>)}</p>
     <p>{sortedPosts.map((post) => <span>{post.data.title} </span>)}</p>
     <ul>
-      {sortedPosts.map((post) => <BlogPost url={post.url} title={post.data.title} description={post.data.description} pubdate={Date.parse(post.data.pubDate)}/>)}
+      {sortedPosts.map((post) => <BlogPost url={post.url} title={post.data.title} description={post.data.description} pubDate={Date.parse(post.data.pubDate)}/>)}
     </ul>
 	</BaseLayout>
