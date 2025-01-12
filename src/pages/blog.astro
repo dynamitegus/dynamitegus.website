@@ -8,13 +8,13 @@ const PageColour = "peach";
 //const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 const allPosts = await getCollection("blog");
 const sortedPosts = allPosts.sort((a, b) => {
-	return new Date(b.frontmatter.pubdate).valueOf() - new Date(a.frontmatter.pubdate).valueOf();
+	return new Date(b.data.pubdate).valueOf() - new Date(a.data.pubdate).valueOf();
 });
 ---
   <BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
     <p>here is list of blog posts<br> go wild</p>
 
     <ul>
-      {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} description={post.frontmatter.description} pubdate={post.frontmatter.pubDate}/>)}
+      {sortedPosts.map((post) => <BlogPost url={post.url} title={post.data.title} description={post.data.description} pubdate={post.data.pubDate}/>)}
     </ul>
 	</BaseLayout>

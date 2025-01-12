@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'What I have been doing'
-pubDate: 2025/01/11
+pubDate: 2025-01-11
 description: 'What i have been doing on my website over the past month or two.'
 author: 'Astro Learner'
 image:
