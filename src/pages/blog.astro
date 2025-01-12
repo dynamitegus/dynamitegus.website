@@ -8,7 +8,7 @@ const PageColour = "peach";
 //const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 const allPosts = await getCollection("blog");
 const sortedPosts = allPosts.sort((a, b) => {
-	return Date.parse(b.data.pubdate) - Date.parse(a.data.pubdate);
+	return Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate);
 });
 ---
   <BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
