@@ -1,60 +1,26 @@
 ---
+import ShortLinks from '../components/ShortLinks.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
 const pageTitle = "About Me";
-
-const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = true;
-const goal = 3;
-
-const skillColor = "blue";
+const PageColour = "maroon";
 
 ---
-<BaseLayout>
-        <h1> oh god its just html</h1>
-        <h2> i should prolly go pack </h2>
-        <p>i am working through the astro tutorial bc i can</p>
-
-
-
-		<ul>
-			<li>{identity.firstName}</li>
-			<li>{identity.country}</li>
-			<li>{identity.occupation}</li>
-			{identity.hobbies.length >= 2 &&
-				<li>Two of my hobbies are: {identity.hobbies[2]} and {identity.hobbies[1]}</li>
-			  }
-		</ul>
-
-		<p>me an my skils</p>
-		<ul>
-			{skills.map((skill) => <li class="skill" >{skill}</li>)}
-		</ul>
-
-		{happy && <p>I am happy to be learning Astro!</p>}
-
-		{finished && <p>I finished this tutorial!</p>}
-
-		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-
-
-		<style define:vars={{skillColor}}>
-			h1 {
-			  color: purple;
-			  font-size: 4rem;
-			}
-			.skill {
-			color: var(--skillColor);
-    		font-weight: bold;
-  			}
-		  </style>
+<BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
+	<p>Hi, I am DynamiteGus, a goofy goober from a little place called earth. You may of heard of it.<br>
+	   I am a budding Programmer that doesnt really know what they are doing, who mainly dabbles in Javascript(and HTML + CSS), Rust and what ever Arduino Lang is(C/C++ i think). I am interested in computers and other electronics, if you couldnt tell and i love finding old tech in op shops<br>
+	   I play a lot of Minecraft, Honkai Star Rail and Phasmophibia among other games, and I use Fedora 41 or whatever the latest version is on my laptop and pc. My Current laptop is a Framework 13, Speced with a AMD Ryzen 7 7840U, the 2.8K Display and the big battery.<br>
+	   <br>
+	   This Website is built with <ShortLinks PageColour=`${PageColour}` LD="https://astro.build/" LN="Astro"/>, with <ShortLinks PageColour=`${PageColour}` LD="https://tailwindcss.com/" LN="TailwindCSS"/> and a <ShortLinks PageColour=`${PageColour}` LD="https://catppuccin.com/" LN="Catppuccin"/> theme. Its hosted with <ShortLinks PageColour=`${PageColour}` LD="https://Sevalla.com/" LN="Sevalla"/> and there is probably something i am missing idk go look at the <ShortLinks PageColour=`${PageColour}` LD="https://github.com/dynamitegus/dynamitegus.website" LN="Github Repo"/>. <br><br>
+	   <i>what else does this need, pronouns and that sort??</i><br>
+	   If you really care, I dont mind what pronouns you use as long as they are either he/him, she/her or
+	   they/them.<br>
+	   Also if you care idk what sexuality I am yet.
+	</p>
+	<br>
+	<h1 class="text-red">Enjoy the Chaos! :)</h1><br>
+	<br>
+	<br>
+	<ShortLinks PageColour=`${PageColour}` LD="https://www.youtube.com/watch?v=Irq-Yyrxgh8" LN="link to the Boppiest alarm ever." />
 		  
-	</BaseLayout>
+</BaseLayout>
