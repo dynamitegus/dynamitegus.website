@@ -1,7 +1,7 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from 'astro/loaders';
-import { string } from "astro:schema";
-//thanks to petermorgandev's git repo i understand what im meant to be doing.
+
+// Reference: https://github.com/petermorgandev/petermorgan.dev
 const blogPostsCollection = defineCollection({
 	//type: "content",
     loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
@@ -13,8 +13,8 @@ const blogPostsCollection = defineCollection({
 		tags: z.array(z.string()).optional(),
 		author: z.string().default('dynamitegus'),
 		image:	z.object({
-			url: z.string(),
-			alt: z.string()
+			url: z.string().url(),
+			alt: z.string().max(125)
 		}).optional()
 	}),
 });
