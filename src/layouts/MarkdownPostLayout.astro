@@ -15,8 +15,8 @@ const formattedPublishDate = new Date(pubDate).toLocaleDateString("en-US", dateO
 
 ---
 <BaseLayout pageTitle={title} PageColour={PageColour}>
-<p>Published on: {pubDate}</p>
-<p>Written by {author}</p>
-
+<p class="text-overlay2">Published on: {pubDate}</p>
+<p class="text-overlay2">Written by {author}</p>
+<p>{tags}</p>
 <slot />
 </BaseLayout>

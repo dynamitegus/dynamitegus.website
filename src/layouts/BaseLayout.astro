@@ -20,7 +20,7 @@ const { pageTitle, PageColour } = Astro.props;
       <h1 class=`text-5xl sm:mx-4 my-10 ${PageColour}`>{pageTitle}</h1>
       <slot />
     </div>
-    <div class="items-center inset-x-0"><Footer /></div>
+    <div class="items-center inset-x-0"><Footer PageColour=`${PageColour}`/></div>
     <script>
       import "../scripts/menu.js";
     </script>
