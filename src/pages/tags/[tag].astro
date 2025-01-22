@@ -24,6 +24,6 @@ const PageColour = "text-teal";
 
 <BaseLayout pageTitle=`Posts tagged with ${tag}` PageColour={PageColour}>
   <ul>
-    {posts.map((post) => <BlogPost id={post.id} title={post.data.title} description={post.data.description}/>)}
+    {posts.map((post) => <BlogPost id={post.id} pubDate={post.data.pubDate} title={post.data.title} description={post.data.description}/>)}
   </ul>
 </BaseLayout>
