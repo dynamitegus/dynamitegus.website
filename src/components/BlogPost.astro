@@ -7,7 +7,7 @@ const dateOptions: object = {
 	day: "numeric",
 };
 
-const formattedPublishDate = new Date(pubDate).toLocaleDateString("en-US", dateOptions);
+const formattedPublishDate = new Date(pubDate).toLocaleDateString("en-AU", dateOptions);
 ---
 <a href={`/posts/${id}/`} class="hover:text-subtext0 p-8 ">
     <div class="hover:bg-mantle hover:rounded-3xl p-6 active:bg-crust">
