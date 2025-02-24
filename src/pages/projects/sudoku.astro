@@ -1,227 +1,106 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-
+import "../../styles/global.css";
 const pageTitle = "Sudoku Project";
+const PageColour = "text-sapphire";
 ---
 
+<BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
 
-<html lang="en">
+<div class="grid grid-cols-9 grid-rows-9 gap-10 prose-div:border-sapphire">
+<div id="a1"></div><div id="b1"></div><div id="c1"></div><div id="d1"></div><div id="e1"></div><div id="f1"></div><div id="g1"></div><div id="h1"></div><div id="i1"></div>
+<div id="a2"></div><div id="b2"></div><div id="c2"></div><div id="d2"></div><div id="e2"></div><div id="f2"></div><div id="g2"></div><div id="h2"></div><div id="i2"></div>
+<div id="a3"></div><div id="b3"></div><div id="c3"></div><div id="d3"></div><div id="e3"></div><div id="f3"></div><div id="g3"></div><div id="h3"></div><div id="i3"></div>
+<div id="a4"></div><div id="b4"></div><div id="c4"></div><div id="d4"></div><div id="e4"></div><div id="f4"></div><div id="g4"></div><div id="h4"></div><div id="i4"></div>
+<div id="a5"></div><div id="b5"></div><div id="c5"></div><div id="d5"></div><div id="e5"></div><div id="f5"></div><div id="g5"></div><div id="h5"></div><div id="i5"></div>
+<div id="a6"></div><div id="b6"></div><div id="c6"></div><div id="d6"></div><div id="e6"></div><div id="f6"></div><div id="g6"></div><div id="h6"></div><div id="i6"></div>
+<div id="a7"></div><div id="b7"></div><div id="c7"></div><div id="d7"></div><div id="e7"></div><div id="f7"></div><div id="g7"></div><div id="h7"></div><div id="i7"></div>
+<div id="a8"></div><div id="b8"></div><div id="c8"></div><div id="d8"></div><div id="e8"></div><div id="f8"></div><div id="g8"></div><div id="h8"></div><div id="i8"></div>
+<div id="a9"></div><div id="b9"></div><div id="c9"></div><div id="d9"></div><div id="e9"></div><div id="f9"></div><div id="g9"></div><div id="h9"></div><div id="i9"></div>
+</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,
-                                   initial-scale=1.0">
-    <title>Sudoku Puzzle</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #F5FCFF;
-        }
+<button data-sudoku-button>Generate Sudoku</button>
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
-        }
+<div data-sudoku-grid></div>
 
-        .row {
-            display: flex;
-        }
+</BaseLayout>
 
-        .cell {
-            width: 30px;
-            height: 30px;
-            border: 1px solid black;
-            text-align: center;
-            line-height: 30px;
-            box-sizing: border-box;
-        }
+<script>
 
-        .lightBackground {
-            background-color: #A9A9A9;
-        }
+const buttons = document.querySelectorAll('[data-sudoku-button]');
 
-        .darkBackground {
-            background-color: #EBF3E8;
-        }
+buttons.forEach((button) => {
+    button.addEventListener('click', () => generateSudokuGrid());
+  });
 
-        .buttonContainer {
-            margin-top: 20px;
-            display: flex;
-            /* Ensure buttons are always displayed */
-            align-items: center;
-            justify-content: center;
-        }
 
-        .buttonContainer button {
-            margin-right: 10px;
-            /* Add margin between buttons */
-        }
 
-        .result {
-            margin-top: 20px;
-            font-weight: bold;
-        }
+    function generateSudokuGrid() {
+        console.log('Generating Sudoku Grid');
+        const grid = Array.from({ length: 9 }, () => Array(9).fill(0));
 
-        .correct {
-            color: green;
-        }
-
-        .incorrect {
-            color: red;
-        }
-    </style>
-</head>
-
-<body>
-
-    <div class="container" id="container"></div>
-
-    <div class="buttonContainer">
-        <button id="solveButton">Solve</button>
-        <button id="resetButton">Reset</button>
-    </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const container = document.getElementById("container");
-
-            // Function to generate a random Sudoku puzzle
-            function generateRandomSudoku() {
-                // Placeholder function for generating a random puzzle (9x9)
-                const puzzle = [
-                    [5, 3, 0, 0, 7, 0, 0, 0, 0],
-                    [6, 0, 0, 1, 9, 5, 0, 0, 0],
-                    [0, 9, 8, 0, 0, 0, 0, 6, 0],
-                    [8, 0, 0, 0, 6, 0, 0, 0, 3],
-                    [4, 0, 0, 8, 0, 3, 0, 0, 1],
-                    [7, 0, 0, 0, 2, 0, 0, 0, 6],
-                    [0, 6, 0, 0, 0, 0, 2, 8, 0],
-                    [0, 0, 0, 4, 1, 9, 0, 0, 5],
-                    [0, 0, 0, 0, 8, 0, 0, 7, 9]
-                ];
-                return puzzle;
-            }
-
-            // Function to solve the Sudoku puzzle
-            function solveSudoku(board) {
-                // Placeholder function for solving Sudoku puzzle
-                const solvedPuzzle = JSON.parse(JSON.stringify(board));
-                solveHelper(solvedPuzzle);
-                return solvedPuzzle;
-            }
-
-            // Helper function for solving Sudoku recursively
-            function solveHelper(board) {
-                const emptyCell = findEmptyCell(board);
-                if (!emptyCell) {
-                    return true; // Puzzle solved
+        function isValid(grid, row, col, num) {
+            console.log('Checking if number is valid');
+            for (let x = 0; x < 9; x++) {
+                if (grid[row][x] === num || grid[x][col] === num) {
+                    return false;
                 }
-
-                const [row, col] = emptyCell;
-                for (let num = 1; num <= 9; num++) {
-                    if (isValidMove(board, row, col, num)) {
-                        board[row][col] = num;
-                        if (solveHelper(board)) {
-                            return true;
-                        }
-                        board[row][col] = 0; // Backtrack
-                    }
-                }
-                return false; // No valid number found for this cell
             }
 
-            // Function to find an empty cell in the Sudoku puzzle
-            function findEmptyCell(board) {
-                for (let row = 0; row < 9; row++) {
-                    for (let col = 0; col < 9; col++) {
-                        if (board[row][col] === 0) {
-                            return [row, col];
-                        }
-                    }
-                }
-                return null; // No empty cell found
-            }
-
-            // Function to check if a move is valid
-            function isValidMove(board, row, col, num) {
-                // Check row
-                for (let i = 0; i < 9; i++) {
-                    if (board[row][i] === num) {
+            const startRow = Math.floor(row / 3) * 3;
+            const startCol = Math.floor(col / 3) * 3;
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+                    if (grid[startRow + i][startCol + j] === num) {
                         return false;
                     }
                 }
-                // Check column
-                for (let i = 0; i < 9; i++) {
-                    if (board[i][col] === num) {
+            }
+
+            return true;
+        }
+
+        function fillGrid(grid) {
+            console.log('Filling Sudoku Grid');
+            for (let row = 0; row < 9; row++) {
+                for (let col = 0; col < 9; col++) {
+                    if (grid[row][col] === 0) {
+                        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+                        while (numbers.length) {
+                            const num = numbers.splice(Math.floor(Math.random() * numbers.length), 1)[0];
+                            if (isValid(grid, row, col, num)) {
+                                grid[row][col] = num;
+                                if (fillGrid(grid)) {
+                                    return true;
+                                }
+                                grid[row][col] = 0;
+                            }
+                        }
                         return false;
                     }
                 }
-                // Check 3x3 grid
-                const startRow = Math.floor(row / 3) * 3;
-                const startCol = Math.floor(col / 3) * 3;
-                for (let i = startRow; i < startRow + 3; i++) {
-                    for (let j = startCol; j < startCol + 3; j++) {
-                        if (board[i][j] === num) {
-                            return false;
-                        }
-                    }
-                }
-                return true; // Move is valid
             }
+            return true;
+        }
 
-            // Function to create the Sudoku puzzle grid
-            function createSudokuGrid(puzzle) {
-                container.innerHTML = '';
-                puzzle.forEach((row, rowIndex) => {
-                    const rowElement = document.createElement('div');
-                    rowElement.classList.add('row');
-                    row.forEach((cell, columnIndex) => {
-                        const cellElement = document.createElement('input');
-                        cellElement.classList.add('cell');
-                        cellElement.classList
-                            .add((rowIndex + columnIndex) % 2 === 0 ?
-                                'lightBackground' : 'darkBackground');
-                        cellElement.type = 'text';
-                        cellElement.maxLength = 1;
-                        cellElement.value = cell !== 0 ? cell : '';
-                        rowElement.appendChild(cellElement);
-                    });
-                    container.appendChild(rowElement);
-                });
-            }
+        fillGrid(grid);
+        return grid;
+    }
 
-            // Initialize puzzle
-            let initialPuzzle = generateRandomSudoku();
-            let puzzle = JSON.parse(JSON.stringify(initialPuzzle));
-            let solvedPuzzle = [];
+    const sudokuGrid = generateSudokuGrid();
+    console.log('Sudoku Grid:');
+    console.log(sudokuGrid);
 
-            // Function to solve the puzzle
-            function solvePuzzle() {
-                solvedPuzzle = solveSudoku(puzzle);
-                createSudokuGrid(solvedPuzzle);
-            }
+    const divs = document.querySelectorAll('[data-sudoku-grid]');
 
-            // Function to reset the puzzle
-            function resetPuzzle() {
-                initialPuzzle = generateRandomSudoku();
-                puzzle = JSON.parse(JSON.stringify(initialPuzzle));
-                solvedPuzzle = [];
-                createSudokuGrid(puzzle);
-            }
 
-            // Initial puzzle creation
-            createSudokuGrid(puzzle);
+    divs.forEach((div: Element) => {
+    div.innerHTML = sudokuGrid.map((row) => {
+        return `<div class="grid grid-cols-9 grid-rows-1 prose-div:border-sapphire">
+        <div id="a1">${row[0]}</div><div id="b1">${row[1]}</div><div id="c1">${row[2]}</div><div id="d1">${row[3]}</div><div id="e1">${row[4]}</div><div id="f1">${row[5]}</div><div id="g1">${row[6]}</div><div id="h1">${row[7]}</div><div id="i1">${row[8]}</div>
+        </div>`;
+    }).join('');
+    });
 
-            // Attach event listeners to buttons
-            document.getElementById("solveButton")
-                .addEventListener("click", solvePuzzle);
-            document.getElementById("resetButton")
-                .addEventListener("click", resetPuzzle);
-        });
-    </script>
 
-</body>
-
-</html>
+</script>

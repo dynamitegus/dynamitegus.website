@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import "../../styles/global.css";
+const pageTitle = "Projects";
+const PageColour = "text-sapphire";
+---
+
+<BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
+    <h1>Projects</h1>
+    <ul>
+        <li><a href="/projects/sudoku">Sudoku</a></li>
+        <li><a href="/projects/tradelist"> Trade List</a></li>
+    </ul>
+</BaseLayout>
