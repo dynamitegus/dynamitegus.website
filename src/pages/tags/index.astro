@@ -4,13 +4,13 @@ import { getCollection } from "astro:content";
 const allPosts = await getCollection("blog");
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 const pageTitle = "Tag index";
-const PageColour = "text-teal";
+const PageColour = "text-green";
 ---
 
 <BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
     <div class="tags flex flex-wrap">
         {tags.map((tag) => (
-        <p class="mx-1 my-3"><a class="py-2 px-4 text-teal bg-mantle no-underline rounded-full text-lg hover:bg-teal hover:text-mantle" href={`/tags/${tag}`}>{tag}</a></p>
+        <p class="mx-1 my-3"><a class="py-2 px-4 text-green bg-mantle no-underline rounded-full text-lg hover:bg-green hover:text-mantle" href={`/tags/${tag}`}>{tag}</a></p>
         ))}
     </div>
 </BaseLayout>

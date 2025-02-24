@@ -1,11 +1,47 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Greeting from '../components/Greeting';
-const pageTitle = 'My gamer Astro Site';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from "../components/Greeting";
+const pageTitle = "My gamer Astro Site";
 const PageColour = "text-mauve";
-
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import Header from "../components/Header.astro";
 ---
-<BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
-		<h2 class="text-3xl my-2 text-mauve" >eat my fat kunucks</h2>
-		<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari", "stinky", "smelly", "loser"]} />
-	</BaseLayout>
+
+<html lang="en" class="bg-background text-text">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="sm:mx-5 md:mx-20 lg:mx-40 xl:mx-120 my-0 px-4 bg-center h-screen">
+    <h1 class=`text-5xl sm:mx-4 my-10 ${PageColour}`></h1>
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <img src="/favicon.svg" class="hidden sm:flex" />
+      </div>
+      <div class="">
+        <Header />
+        <br>
+        <br>
+        <br>
+        <h2 class="text-3xl my-2 text-mauve">Welcome to dynamitegus.org</h2>
+        <p>This is my small little project website that I work on for fun.</p>
+        <p>It's just a little goofy and if you can take a few light hearted jokes.</p>
+        <p>And there might be a few little easter eggs here and there.</p>
+        
+      </div>
+    </div>
+    
+    <br>
+    <br>
+    <div class="items-center inset-x-0">
+      <Footer PageColour=`${PageColour}` />
+    </div>
+    <script>
+      import "../scripts/menu.js";
+    </script>
+  </body>
+</html>
