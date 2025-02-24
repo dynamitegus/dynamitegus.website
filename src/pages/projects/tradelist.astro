@@ -1,4 +1,5 @@
 ---
+import ShortLinks from "../../components/ShortLinks.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const pageTitle = "Trade List";
@@ -7,6 +8,9 @@ const PageColour = "text-sapphire";
 
 <BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
 
+    <ShortLinks PageColour={PageColour} LD="https://carnelian-cardigan-f60.notion.site/19e59c22f5d480e5864aebacc06a32d0?v=19e59c22f5d480c2bc1d000c8bbb1073" LN="link to notion page"/>
+    <br>
+    <br>    
     <iframe src="https://carnelian-cardigan-f60.notion.site/ebd/19e59c22f5d480e5864aebacc06a32d0?v=19e59c22f5d480c2bc1d000c8bbb1073" width="100%" height="600" frameborder="0" allowfullscreen />
                  
 </BaseLayout>
