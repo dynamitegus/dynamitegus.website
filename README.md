@@ -4,8 +4,7 @@ MY very cool website that i enjoy working on.
 Built with astro and tailwind.
 
 Coderabbit will summerise and review your Pull Requests and i might accept them.
-
-
+im mainly making this to close the issue.
 
 ## 🧞 Commands
 
