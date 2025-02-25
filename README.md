@@ -1,6 +1,6 @@
+# dyamitegus.org repository
 
-
-MY very cool website that i enjoy working on.
+My very cool website that i enjoy working on.
 Built with astro and tailwind.
 
 Coderabbit will summerise and review your Pull Requests and i might accept them.
