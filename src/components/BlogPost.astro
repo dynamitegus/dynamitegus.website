@@ -7,16 +7,22 @@ const dateOptions: object = {
 	day: "numeric",
 };
 
-const formattedPublishDate = new Date(pubDate).toLocaleDateString("en-AU", dateOptions);
----
-<a href={`/posts/${id}/`} class="hover:text-subtext0 p-8 ">
-    <div class="hover:bg-mantle hover:rounded-3xl p-6 active:bg-crust">
-        <li>
+let formattedPublishDate = new Date(pubDate).toLocaleDateString("en-AU", dateOptions);
 
-            <div class="text-sm py-4 text-overlay2">{formattedPublishDate}</div>
+if (formattedPublishDate === "Invalid Date") {
+    formattedPublishDate = "";
+}
+
+---
+<a href={id} class="hover:text-subtext0 p-8 ">
+    <div class="hover:bg-mantle hover:rounded-3xl p-6 active:bg-crust">
+        
+
             <div class="text-4xl pb-3">{title}</div>
+            <div class="text-sm py-4 text-overlay2">{formattedPublishDate}</div>
             <div>{description}</div>
-        </li>
+            
+        
     </div>
 </a>
 

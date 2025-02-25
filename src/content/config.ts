@@ -9,7 +9,7 @@ const blogPostsCollection = defineCollection({
 		title: z.string(),
 		description: z.string(),
 		modDate: z.date().optional(),
-		pubDate: z.date(),
+		pubDate: z.date().optional(),
 		tags: z.array(z.string()).optional(),
 		author: z.string().default('dynamitegus'),
 		image:	z.object({
