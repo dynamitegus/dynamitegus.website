@@ -7,7 +7,7 @@ const dateOptions: object = {
 	day: "numeric",
 };
 
-var formattedPublishDate = new Date(pubDate).toLocaleDateString("en-AU", dateOptions);
+let formattedPublishDate = new Date(pubDate).toLocaleDateString("en-AU", dateOptions);
 
 if (formattedPublishDate === "Invalid Date") {
     formattedPublishDate = "";
