@@ -1,9 +1,16 @@
 ---
+import { Client } from "@notionhq/client";
+
 import ShortLinks from "../../components/ShortLinks.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const pageTitle = "Trade List";
 const PageColour = "text-sapphire";
+
+const notion = new Client({
+  auth: process.env.NOTION_TOKEN,
+})
+
 ---
 
 <BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
