@@ -1,6 +1,7 @@
 ---
 import { Client } from "@notionhq/client";
 
+
 import ShortLinks from "../../components/ShortLinks.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
@@ -8,13 +9,13 @@ const pageTitle = "Trade List";
 const PageColour = "text-sapphire";
 
 const notion = new Client({
-  auth: process.env.NOTION_TOKEN,
+  auth: import.meta.env.NOTION_TOKEN,
 });
 
 (async () => {
-  const databaseId = "668d797c-76fa-4934-9b05-ad288df2d136";
+  const databaseId = "19e59c22f5d480e5864aebacc06a32d0";
   const response = await notion.databases.retrieve({ database_id: databaseId });
-  console.log(response);
+  console.log('Notion Response:', response);
 })();
 ---
 
