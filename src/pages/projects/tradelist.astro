@@ -3,6 +3,7 @@ import { Client } from "@notionhq/client";
 
 import ShortLinks from "../../components/ShortLinks.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getDatabase } from "@notionhq/client/build/src/api-endpoints";
 
 const pageTitle = "Trade List";
 const PageColour = "text-sapphire";
@@ -11,18 +12,27 @@ const notion = new Client({
   auth: import.meta.env.NOTION_TOKEN,
 });
 
-(async () => {
+async function getnotiondata() {
   const databaseId = "19e59c22f5d480e5864aebacc06a32d0";
-  const notiondatabaseresponse = await notion.databases.query({ 
-      database_id: databaseId,
-      sorts: [
-        {
-          property: "Item",
-          direction: "ascending",
-        },
-      ],
-    });
-})();
+  const notiondatabaseresponse = await notion.databases.query({
+    database_id: databaseId,
+    sorts: [
+      {
+        property: "Item",
+        direction: "ascending",
+      },
+    ],
+  }).then(
+    (response) => {
+      return(response);
+    }
+  );
+
+
+};
+
+const getgetnotiondata = getnotiondata();
+console.log(getnotiondata());
 ---
 
 <BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
@@ -32,22 +42,7 @@ const notion = new Client({
     LN="link to notion page"
   />
 
-<p>
-  {(async () => {
-    const databaseId = "19e59c22f5d480e5864aebacc06a32d0";
-    const notiondatabaseresponse = await notion.databases.query({ 
-        database_id: databaseId,
-        sorts: [
-          {
-            property: "Item",
-            direction: "ascending",
-          },
-        ],
-      });
-
-    return notiondatabaseresponse
-  })()}
-</p>
-
-
+  <p>
+    {getgetnotiondata}
+  </p>
 </BaseLayout>
