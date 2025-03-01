@@ -1,7 +1,6 @@
 ---
 import { Client } from "@notionhq/client";
 
-
 import ShortLinks from "../../components/ShortLinks.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
@@ -14,8 +13,15 @@ const notion = new Client({
 
 (async () => {
   const databaseId = "19e59c22f5d480e5864aebacc06a32d0";
-  const response = await notion.databases.retrieve({ database_id: databaseId });
-  console.log('Notion Response:', response);
+  const notiondatabaseresponse = await notion.databases.query({ 
+      database_id: databaseId,
+      sorts: [
+        {
+          property: "Item",
+          direction: "ascending",
+        },
+      ],
+    });
 })();
 ---
 
@@ -25,11 +31,23 @@ const notion = new Client({
     LD="https://carnelian-cardigan-f60.notion.site/19e59c22f5d480e5864aebacc06a32d0?v=19e59c22f5d480c2bc1d000c8bbb1073"
     LN="link to notion page"
   />
-  <div class="mb-8"></div>
-  <iframe
-    src="https://carnelian-cardigan-f60.notion.site/ebd/19e59c22f5d480e5864aebacc06a32d0?v=19e59c22f5d480c2bc1d000c8bbb1073"
-    width="100%"
-    height="600"
-    frameborder="0"
-    allowfullscreen></iframe>
+
+<p>
+  {(async () => {
+    const databaseId = "19e59c22f5d480e5864aebacc06a32d0";
+    const notiondatabaseresponse = await notion.databases.query({ 
+        database_id: databaseId,
+        sorts: [
+          {
+            property: "Item",
+            direction: "ascending",
+          },
+        ],
+      });
+
+    return notiondatabaseresponse
+  })()}
+</p>
+
+
 </BaseLayout>
