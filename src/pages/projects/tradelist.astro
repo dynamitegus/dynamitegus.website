@@ -3,7 +3,8 @@ import { Client } from "@notionhq/client";
 
 import ShortLinks from "../../components/ShortLinks.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getDatabase } from "@notionhq/client/build/src/api-endpoints";
+import "../../styles/global.css";
+
 
 const pageTitle = "Trade List";
 const PageColour = "text-sapphire";
@@ -42,7 +43,8 @@ console.log(getnotiondata());
     LN="link to notion page"
   />
 
-  <p>
+  <div class="bg-crust p-5 rounded-lg">
+    <div> goorn </div>
     {getgetnotiondata}
-  </p>
+  </div>
 </BaseLayout>

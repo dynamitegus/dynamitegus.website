@@ -15,8 +15,13 @@
     "@catppuccin/palette": "^1.7.1",
     "@notionhq/client": "^2.2.16",
     "astro": "^5.3.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.477.0",
     "preact": "^10.25.1",
-    "tailwindcss": "^3.4.17"
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@catppuccin/tailwindcss": "^0.1.6",
