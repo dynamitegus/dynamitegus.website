@@ -1,6 +1,8 @@
 ---
-import { Client } from "@notionhq/client";
 
+import type { FunctionalComponent } from 'preact';
+import { Client } from "@notionhq/client";
+import NotionData from "../../components/NotionData.jsx";
 import ShortLinks from "../../components/ShortLinks.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import "../../styles/global.css";
@@ -9,31 +11,6 @@ import "../../styles/global.css";
 const pageTitle = "Trade List";
 const PageColour = "text-sapphire";
 
-const notion = new Client({
-  auth: import.meta.env.NOTION_TOKEN,
-});
-
-async function getnotiondata() {
-  const databaseId = "19e59c22f5d480e5864aebacc06a32d0";
-  const notiondatabaseresponse = await notion.databases.query({
-    database_id: databaseId,
-    sorts: [
-      {
-        property: "Item",
-        direction: "ascending",
-      },
-    ],
-  }).then(
-    (response) => {
-      return(response);
-    }
-  );
-
-
-};
-
-const getgetnotiondata = getnotiondata();
-console.log(getnotiondata());
 ---
 
 <BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
@@ -45,6 +22,8 @@ console.log(getnotiondata());
 
   <div class="bg-crust p-5 rounded-lg">
     <div> goorn </div>
-    {getgetnotiondata}
+      <NotionData />
   </div>
 </BaseLayout>
+
+

@@ -5,7 +5,7 @@ import Header from "../components/Header.astro";
 const { pageTitle, PageColour } = Astro.props;
 ---
 
-<html lang="en" class="bg-background text-text">
+<html lang="en" class="bg-base text-text">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,7 +13,7 @@ const { pageTitle, PageColour } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body class="sm:mx-5 md:mx-20 lg:mx-40 xl:mx-80 my-0 px-4 bg-center h-screen">
+  <body class="sm:mx-5 md:mx-20 lg:mx-40 xl:mx-80 my-0 px-4 bg-center h-screen bg-base">
     <Header />
     <div class="md:px-20 md:px-30">
       <h1 class=`text-5xl sm:mx-4 my-10 ${PageColour}`>{pageTitle}</h1>

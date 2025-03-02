@@ -1,0 +1,295 @@
+{
+    "object": "database",
+    "id": "19e59c22-f5d4-80e5-864a-ebacc06a32d0",
+    "cover": null,
+    "icon": null,
+    "created_time": "2025-02-18T06:07:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "53a65438-8a7b-4eb1-a92c-08c22cbea464"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "53a65438-8a7b-4eb1-a92c-08c22cbea464"
+    },
+    "last_edited_time": "2025-03-01T06:33:00.000Z",
+    "title": [
+      {
+        "type": "text",
+        "text": {
+          "content": "Trade list",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": "Trade list",
+        "href": null
+      }
+    ],
+    "description": [
+      {
+        "type": "text",
+        "text": {
+          "content": "The price in emeralds depends on the enchantment level and \"treasure\" status. The minimum price of a book is \ngiven by 2 + 3 * (enchantment level), while the maximum price is 6 + 13 * (enchantment level). \nThe possible values are \n5–19 for Lvl I,\n8–32 for Lvl II,\n11–45 for Lvl III,\n14–58 for Lvl IV,\nand 17–71 for Lvl V.\n",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": "The price in emeralds depends on the enchantment level and \"treasure\" status. The minimum price of a book is \ngiven by 2 + 3 * (enchantment level), while the maximum price is 6 + 13 * (enchantment level). \nThe possible values are \n5–19 for Lvl I,\n8–32 for Lvl II,\n11–45 for Lvl III,\n14–58 for Lvl IV,\nand 17–71 for Lvl V.\n",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
+          "content": "For ",
+          "link": null
+        },
+        "annotations": {
+          "bold": true,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": "For ",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
+          "content": "treasure enchantments",
+          "link": {
+            "url": "https://minecraft.wiki/w/Treasure_enchantment"
+          }
+        },
+        "annotations": {
+          "bold": true,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": "treasure enchantments",
+        "href": "https://minecraft.wiki/w/Treasure_enchantment"
+      },
+      {
+        "type": "text",
+        "text": {
+          "content": " the price is doubled.",
+          "link": null
+        },
+        "annotations": {
+          "bold": true,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " the price is doubled.",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
+          "content": " The cost is capped at 64 emeralds. All values below this cap are equally probable.",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " The cost is capped at 64 emeralds. All values below this cap are equally probable.",
+        "href": null
+      }
+    ],
+    "is_inline": false,
+    "properties": {
+      "Enchanted onto": {
+        "id": "CJFA",
+        "name": "Enchanted onto",
+        "type": "multi_select",
+        "multi_select": {
+          "options": [
+            {
+              "id": "2e365a57-bbe4-4937-8c89-63a0a90aee86",
+              "name": "Helmets",
+              "color": "brown",
+              "description": null
+            },
+            {
+              "id": "b1195119-3485-485d-bba4-786d4f88c49d",
+              "name": "Chestplate",
+              "color": "gray",
+              "description": null
+            },
+            {
+              "id": "dfd7d82d-4208-4b9f-a7e7-3d633dfa02de",
+              "name": "Leggings",
+              "color": "orange",
+              "description": null
+            },
+            {
+              "id": "eb1a0226-181d-40cb-97ea-d6bdced8c41e",
+              "name": "Boots",
+              "color": "red",
+              "description": null
+            },
+            {
+              "id": "55b6035a-d641-4277-84c1-f600069f0324",
+              "name": "Sword",
+              "color": "blue",
+              "description": null
+            },
+            {
+              "id": "ef8d71be-ed5b-439a-884d-a17ba0a632a3",
+              "name": "Pickaxe",
+              "color": "purple",
+              "description": null
+            },
+            {
+              "id": "8e11efb7-3ec0-4711-8f04-a7c180b9e868",
+              "name": "Axe",
+              "color": "default",
+              "description": null
+            },
+            {
+              "id": "c7b77758-7728-4269-9ac0-e9b73f118e11",
+              "name": "Shovel",
+              "color": "yellow",
+              "description": null
+            },
+            {
+              "id": "ee5bddc2-8a95-410e-995b-9bb0ec97eba3",
+              "name": "Hoe",
+              "color": "pink",
+              "description": null
+            },
+            {
+              "id": "783f2565-5f52-4fcf-a8b2-01b741971df5",
+              "name": "Mase",
+              "color": "green",
+              "description": null
+            },
+            {
+              "id": "952eba54-9b84-4132-aef5-ad87b7a40e24",
+              "name": "Bow",
+              "color": "default",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Redo": {
+        "id": "O%3D~j",
+        "name": "Redo",
+        "type": "checkbox",
+        "checkbox": {}
+      },
+      "Enchantment": {
+        "id": "Wh%5E%5D",
+        "name": "Enchantment",
+        "type": "checkbox",
+        "checkbox": {}
+      },
+      "Price": {
+        "id": "ZNf%5C",
+        "name": "Price",
+        "type": "number",
+        "number": {
+          "format": "number"
+        }
+      },
+      "Sell": {
+        "id": "ew%7Dn",
+        "name": "Sell",
+        "type": "checkbox",
+        "checkbox": {}
+      },
+      "Price item": {
+        "id": "gFSl",
+        "name": "Price item",
+        "type": "multi_select",
+        "multi_select": {
+          "options": [
+            {
+              "id": "b3ef4898-aba5-473a-a828-19e00bcb43f6",
+              "name": "Emeralds",
+              "color": "green",
+              "description": null
+            },
+            {
+              "id": "70a8b923-d75e-4a0f-bb48-a21aa41dd8cb",
+              "name": "Rotten Flesh",
+              "color": "orange",
+              "description": null
+            },
+            {
+              "id": "e7c907f6-3273-4243-a6ea-29f318740143",
+              "name": "Clay Ball",
+              "color": "brown",
+              "description": null
+            },
+            {
+              "id": "0428cd85-3312-40d8-82c3-e40cb9b20510",
+              "name": "Stone",
+              "color": "blue",
+              "description": null
+            },
+            {
+              "id": "238e6609-fcc8-4cae-ad29-0f5b7991f48e",
+              "name": "Diorite",
+              "color": "pink",
+              "description": null
+            }
+          ]
+        }
+      },
+      "Buy": {
+        "id": "hZU%3F",
+        "name": "Buy",
+        "type": "checkbox",
+        "checkbox": {}
+      },
+      "Position": {
+        "id": "vK%5Er",
+        "name": "Position",
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Item": {
+        "id": "title",
+        "name": "Item",
+        "type": "title",
+        "title": {}
+      }
+    },
+    "parent": {
+      "type": "page_id",
+      "page_id": "19e59c22-f5d4-8074-b29f-f0afd69f63ad"
+    },
+    "url": "https://www.notion.so/19e59c22f5d480e5864aebacc06a32d0",
+    "public_url": "https://carnelian-cardigan-f60.notion.site/19e59c22f5d480e5864aebacc06a32d0",
+    "archived": false,
+    "in_trash": false,
+    "request_id": "4756c6ef-7354-4778-ae08-e9c81be24c68"
+  }
+  
