@@ -18,15 +18,12 @@ import Header from "../components/Header.astro";
   </head>
   <body class="sm:mx-5 md:mx-20 lg:mx-40 xl:mx-120 my-0 px-4 bg-center h-screen">
     <h1 class=`text-5xl sm:mx-4 my-10 ${PageColour}`></h1>
-    <div class="grid grid-cols-2 gap-4">
-      <div>
-        <img src="/favicon.svg" class="hidden sm:flex" />
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div class="hidden sm:flex">
+        <img src="/favicon.svg" />
       </div>
       <div class="">
         <Header />
-        <br>
-        <br>
-        <br>
         <h2 class="text-3xl my-2 text-mauve">Welcome to dynamitegus.org</h2>
         <p>This is my small little project website that I work on for fun.</p>
         <p>It's just a little goofy and if you can take a few light hearted jokes you'll be right at home.</p>
