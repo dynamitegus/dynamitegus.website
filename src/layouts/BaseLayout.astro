@@ -14,7 +14,7 @@ const { pageTitle, PageColour } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body class="sm:mx-5 md:mx-20 lg:mx-40 xl:mx-80 my-0 px-4 bg-center h-screen">
-    <Header />
+    <div class="fixed top-0 w-full bg-base"><Header /></div>
     <div class="md:px-20 md:px-30">
       <h1 class=`text-5xl sm:mx-4 my-10 ${PageColour}`>{pageTitle}</h1>
       <slot />
