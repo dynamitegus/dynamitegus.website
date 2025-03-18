@@ -1,1 +1,15 @@
-404
+---
+import ShortLinks from '../components/ShortLinks.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "404";
+const PageColour = "text-mauve";
+
+---
+<BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
+
+	<p>Please either head on back to where you came from or go <ShortLinks PageColour={PageColour} LN="Home" LD="/"/></p>
+    <p>Alternatively, if you think this is an error, <ShortLinks PageColour={PageColour} LN="Create an issue on Github." LD="https://github.com/dynamitegus/dynamitegus.website/issues"/></p>
+    <p>Either way, there is nothing for you here.</p>
+    
+</BaseLayout>
