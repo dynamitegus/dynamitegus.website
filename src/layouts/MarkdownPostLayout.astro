@@ -1,4 +1,5 @@
 ---
+import ShortLinks from "../components/ShortLinks.astro";
 import BaseLayout from "./BaseLayout.astro";
 const { title, url, description, pubDate, author, tags } = Astro.props;
 const PageColour = "text-peach";
@@ -17,6 +18,6 @@ const formattedPublishDate = new Date(pubDate).toLocaleDateString("en-US", dateO
 <BaseLayout pageTitle={title} PageColour={PageColour}>
 <p class="text-overlay2">Published on: {pubDate}</p>
 <p class="text-overlay2">Written by {author}</p>
-<p>{tags}</p>
+<p class="text-overlay2">Tags: {tags.map((tag: string) => {return (<ShortLinks PageColour="text-overlay2 pr-1.5 hover:text-overlay0" LD=`/tag/${tag}` LN=`${tag}` />);})}</p>
 <slot />
 </BaseLayout>
