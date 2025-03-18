@@ -1,11 +1,22 @@
-import rss, { pagesGlobToRssItems } from '@astrojs/rss'
+import rss from '@astrojs/rss'
+import { getCollection } from 'astro:content'
+
+
 
 export async function GET(context) {
+    const blog = await getCollection('blog');
     return rss({
         title: 'dynamitegus | Blog',
         description: 'dynamitegus\'s blog its blogging time',
         site: context.site,
-        items: await pagesGlobToRssItems(import.meta.glob('./**/*.md')),
+        items: blog.map((post) => ({
+            title: post.data.title,
+            pubDate: post.data.pubDate,
+            description: post.data.description,
+            // Compute RSS link from post `id`
+            // This example assumes all posts are rendered as `/blog/[id]` routes
+            link: `/blog/${post.id}/`,
+          })),
         customData: `<language>en-us</language>`,
     });
 }
