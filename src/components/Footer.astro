@@ -3,6 +3,6 @@ import Social from "./Social.astro"
 const { PageColour } = Astro.props;
 ---
 <footer class="flex bg-center gap-4 mt-8 w-60 mx-auto">
-    <Social PageColour=`${PageColour}` platform="github" username="dynamitegus" />
-    <Social PageColour=`${PageColour}` platform="bluesky" username="profile/dynamitegus.org" />
+    <Social PageColour=`${PageColour}` tld="com" platform="github" username="dynamitegus" />
+    <Social PageColour=`${PageColour}` tld="app" platform="bsky" username="profile/dynamitegus.org" />
 </footer>
