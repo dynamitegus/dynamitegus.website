@@ -1,23 +1,22 @@
 ---
-import BlogPost from '../../components/BlogPost.astro';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPost from "../../components/BlogPost.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/components/ui/hover-card"
+} from "@/components/ui/hover-card";
+import { HoverCardDemo } from "../../components/HoverCardComponent.jsx";
+import { Button } from "@/components/ui/button";
 import "../../styles/global.css";
 const pageTitle = "shadcn Playground";
 const PageColour = "text-sapphire";
+
 ---
 
 <BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
+  <Button>button</Button>
 
-    <HoverCard>
-        <HoverCardTrigger>Hover</HoverCardTrigger>
-        <HoverCardContent>
-          The React Framework – created and maintained by @vercel.
-        </HoverCardContent>
-      </HoverCard>
+  <HoverCardDemo/>
 
 </BaseLayout>
