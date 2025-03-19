@@ -1,6 +1,7 @@
 ---
 import BlogPost from "../../components/BlogPost.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ShortlinksHover from "../../components/ShortLinksHover.astro";
 import {
   HoverCard,
   HoverCardContent,
@@ -14,6 +15,8 @@ const PageColour = "text-sapphire";
 ---
 
 <BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
+
+  <h2>Buttons and Hover Cards</h2>
   <Button>button</Button>
 
   <HoverCardComponent
@@ -22,5 +25,13 @@ const PageColour = "text-sapphire";
     Content="This is some content"
     Destination="/"
     client:load
+  />
+
+  <ShortlinksHover
+    PageColour={PageColour}
+    LD="/projects"
+    LN="Projects"
+    Title="title"
+    Content="content"
   />
 </BaseLayout>

@@ -14,18 +14,19 @@ export const HoverCardComponent = ({
   Title,
   Content,
   Destination,
+  PageColour,
 }) => {
   return (
     <HoverCard>
       <HoverCardTrigger asChild>
         <Button asChild>
-          <a class="hover:underline" href={ Destination }>{ Trigger }</a>
+          <a class={`hover:underline ${ PageColour }`} href={ Destination }>{ Trigger }</a>
         </Button>
       </HoverCardTrigger>
       <HoverCardContent className="w-80 bg-mantle border-none rounded-xl">
         <div className="flex justify-between space-x-4">
           <div className="space-y-1">
-            <h4 className="text-sm font-semibold">{Title}</h4>
+            <h4 className={`text-sm font-semibold ${ PageColour }`}>{Title}</h4>
             <p className="text-sm">{Content}</p>
           </div>
         </div>
