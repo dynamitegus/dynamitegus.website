@@ -14,8 +14,6 @@ export default defineConfig({
     tailwind(),
     mdx(),
     react({
-      experimentalReactChildren: true,
-      experimentalDisableStreaming: true,
     }),
   ],
 });

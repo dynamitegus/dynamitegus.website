@@ -6,17 +6,21 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { HoverCardDemo } from "../../components/HoverCardComponent.jsx";
+import { HoverCardComponent } from "../../components/HoverCardComponent.jsx";
 import { Button } from "@/components/ui/button";
 import "../../styles/global.css";
 const pageTitle = "shadcn Playground";
 const PageColour = "text-sapphire";
-
 ---
 
 <BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
   <Button>button</Button>
 
-  <HoverCardDemo/>
-
+  <HoverCardComponent
+    Trigger="Hover"
+    Title="smth smth"
+    Content="This is some content"
+    Destination="/"
+    client:load
+  />
 </BaseLayout>
