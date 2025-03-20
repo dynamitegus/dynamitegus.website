@@ -31,7 +31,7 @@
     --surface1: var(--ctp-latte-surface1);
     --surface0: var(--ctp-latte-surface0);
     --base: var(--ctp-latte-base);
-    --background: var(--ctop-latte-base);
+    --background: var(--ctp-latte-base);
     --mantle: var(--ctp-latte-mantle);
     --crust: var(--ctp-latte-crust);
     --accent: var(--pink);
