@@ -1,0 +1,38 @@
+---
+import BlogPost from "../../components/BlogPost.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ShortlinksHover from "../../components/ShortLinksHover.astro";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import { HoverCardComponent } from "../../components/HoverCardComponent.jsx";
+import { Button } from "@/components/ui/button";
+import "../../styles/global.css";
+const pageTitle = "shadcn Playground";
+const PageColour = "text-sapphire";
+---
+
+<BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
+
+  <h2>Buttons and Hover Cards</h2>
+  <Button>button</Button>
+
+  <HoverCardComponent
+    Trigger="Hover"
+    Title="smth smth"
+    Content="This is some content"
+    PageColour={PageColour}
+    Destination="/"
+    client:load
+  />
+
+  <ShortlinksHover
+    PageColour={PageColour}
+    LD="/projects"
+    LN="Projects"
+    Title="title"
+    Content="content"
+  />
+</BaseLayout>

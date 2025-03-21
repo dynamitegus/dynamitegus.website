@@ -1,0 +1,12 @@
+---
+const { PageColour, LD, LN, Title, Content } = Astro.props;
+import { HoverCardComponent } from "./HoverCardComponent.jsx";
+---
+<HoverCardComponent
+Trigger={LN}
+PageColour={PageColour}
+Title={Title}
+Content={Content}
+Destination={LD}
+client:load
+/>
