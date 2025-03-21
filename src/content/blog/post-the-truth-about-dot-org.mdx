@@ -13,7 +13,7 @@ export const PageColour = "text-peach"
 import { Image } from 'astro:assets';
 import ShortLinksHover from '/src/components/ShortLinksHover.astro';
 import { Code } from 'astro-expressive-code/components'
-import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
+
 
 ## Before we get started, I think we need to define some terms.
 
@@ -68,10 +68,11 @@ One of the main requirements that domain names had back in the 80\'s and 90\'s w
 This data is public.\
 Anyone can view this through <ShortLinksHover LN="who.is" LD="https://who.is/" PageColour={PageColour} Title="WHOIS Search, Domain Name, Website, and IP Tools - Who.is" Content="Find information on any domain name or website. Large database of whois information, RDAP, DNS, domain names, name servers, IPs, and tools for searching and monitoring domain names." /> or through the whois command on unix systems.
 So I ran the whois command on my domain dynamitegus.org
-```bash
+
+<Code code="balls" lang="balls"/>
+
+```bash frame="..." showLineNumbers
 $ whois dynamitegus.org
-```
-<Code lang="yaml" code="
 Domain Name: dynamitegus.org
 Registry Domain ID: 5d90c122b4864f9fa38d02bcbfb0427f-LROR
 Registrar WHOIS Server: whois.squarespace.domains
@@ -135,7 +136,7 @@ URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
 For more information on Whois status codes, please visit https://icann.org/epp
 
 Terms of Use: Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to (a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Identity Digital except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.  The Registrar of Record identified in this output may have an RDDS service that can be queried for additional information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.
-" />
+```
 I\'m not gonna make you dicipher that, but all you need to take not of is the constant REDACTED FOR PRIVACY. This is in this case, squarespace, redacting my name for privacy reasons, which you can do on .org. Me, dynamitegus has a .org, I\'m not a not for profit or a trustworthy organisation, hell the last version of this website had <span style="color:#ff00ff;">A totally trustworthy .org site</span> as the title on the landing page.
 
 
