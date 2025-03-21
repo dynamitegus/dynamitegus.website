@@ -37,7 +37,14 @@ const featuredPost = filteredPost[0];
       </div>
     </div>
     <br>
-    <BlogPost title={featuredPost.data.title} id=`/posts/${featuredPost.id}` description={featuredPost.data.description} pubDate={featuredPost.data.pubDate}  />
+    {featuredPost && (
+      <BlogPost 
+        title={featuredPost.data.title} 
+        id={`/posts/${featuredPost.id}`} 
+        description={featuredPost.data.description} 
+        pubDate={featuredPost.data.pubDate}  
+      />
+    )}
     <br>
     <div class="items-center inset-x-0">
       <Footer PageColour=`${PageColour}` />
