@@ -16,7 +16,7 @@ export default defineConfig({
   site: "https://dynamitegus.org",
   integrations: [
     tailwind(),
-    mdx(),
+    
     react({}),
     astroExpressiveCode({
       plugins: [pluginLineNumbers(), pluginCollapsibleSections()],
@@ -24,7 +24,10 @@ export default defineConfig({
         // Change the default style of collapsible sections
         collapseStyle: 'collapsible-start',
       },
-    }),],
+      themes: ['catppuccin-mocha'],
+    }),
+    mdx(),
+  ],
   markdown: {
     shikiConfig: {
       theme: 'catppuccin-mocha',
