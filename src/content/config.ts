@@ -15,7 +15,8 @@ const blogPostsCollection = defineCollection({
 		image:	z.object({
 			url: z.string().url(),
 			alt: z.string().max(125)
-		}).optional()
+		}).optional(),
+		featured: z.boolean().default(false).optional(),
 	}),
 });
 export const collections = { blog: blogPostsCollection };
