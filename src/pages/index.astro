@@ -6,6 +6,11 @@ const PageColour = "text-mauve";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 import Header from "../components/Header.astro";
+import BlogPost from "@/components/BlogPost.astro";
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("blog");
+const filteredPost = allPosts.filter((post) => post.data.featured === true);
+const featuredPost = filteredPost[0];
 ---
 
 <html lang="en" class="bg-base text-text">
@@ -31,8 +36,8 @@ import Header from "../components/Header.astro";
         
       </div>
     </div>
-    
     <br>
+    <BlogPost title={featuredPost.data.title} id=`/posts/${featuredPost.id}` description={featuredPost.data.description} pubDate={featuredPost.data.pubDate}  />
     <br>
     <div class="items-center inset-x-0">
       <Footer PageColour=`${PageColour}` />
