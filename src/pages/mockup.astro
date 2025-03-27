@@ -75,10 +75,10 @@ The form will allow a potential applicant to fill in the following:</p>
     </tbody>
 </table>
 
-<form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" class="flex flex-col gap-4 p-4 border border-black">
+<form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" class="flex flex-col gap-4 p-4 border border-black prose-">
     <label>
         Job reference number:
-        <select name="jobRef" required>
+        <select name="jobRef" class="border border-black" required>
             <option value="">Select a job reference</option>
             <option value="job1">Job 1</option>
             <option value="job2">Job 2</option>
@@ -88,20 +88,20 @@ The form will allow a potential applicant to fill in the following:</p>
 
     <label>
         First name:
-        <input type="text" name="firstName" maxlength="20" pattern="[A-Za-z]+" required />
+        <input type="text" name="firstName" maxlength="20" pattern="[A-Za-z]+" class="border border-black" required />
     </label>
 
     <label>
         Last name:
-        <input type="text" name="lastName" maxlength="20" pattern="[A-Za-z]+" required />
+        <input type="text" name="lastName" maxlength="20" pattern="[A-Za-z]+" class="border border-black" required />
     </label>
 
     <label>
         Date of birth:
-        <input type="date" name="dob" required />
+        <input type="date" name="dob" class="border border-black" required />
     </label>
 
-    <fieldset>
+    <fieldset class="border border-black p-2">
         <legend>Gender:</legend>
         <label><input type="radio" name="gender" value="male" required /> Male</label>
         <label><input type="radio" name="gender" value="female" required /> Female</label>
@@ -110,17 +110,17 @@ The form will allow a potential applicant to fill in the following:</p>
 
     <label>
         Street Address:
-        <input type="text" name="streetAddress" maxlength="40" required />
+        <input type="text" name="streetAddress" maxlength="40" class="border border-black" required />
     </label>
 
     <label>
         Suburb/town:
-        <input type="text" name="suburb" maxlength="40" required />
+        <input type="text" name="suburb" maxlength="40" class="border border-black" required />
     </label>
 
     <label>
         State:
-        <select name="state" required>
+        <select name="state" class="border border-black" required>
             <option value="">Select a state</option>
             <option value="VIC">VIC</option>
             <option value="NSW">NSW</option>
@@ -135,20 +135,20 @@ The form will allow a potential applicant to fill in the following:</p>
 
     <label>
         Postcode:
-        <input type="text" name="postcode" pattern="\d{4}" required />
+        <input type="text" name="postcode" pattern="\d{4}" class="border border-black" required />
     </label>
 
     <label>
         Email address:
-        <input type="email" name="email" required />
+        <input type="email" name="email" class="border border-black" required />
     </label>
 
     <label>
         Phone number:
-        <input type="text" name="phone" pattern="[0-9 ]{8,12}" required />
+        <input type="text" name="phone" pattern="[0-9 ]{8,12}" class="border border-black" required />
     </label>
 
-    <fieldset>
+    <fieldset class="border border-black p-2">
         <legend>Required technical list:</legend>
         <label><input type="checkbox" name="techSkills" value="skill1" /> Skill 1</label>
         <label><input type="checkbox" name="techSkills" value="skill2" /> Skill 2</label>
@@ -157,7 +157,7 @@ The form will allow a potential applicant to fill in the following:</p>
 
     <label>
         Other skills:
-        <textarea name="otherSkills"></textarea>
+        <textarea name="otherSkills" class="border border-black"></textarea>
     </label>
 
     <button type="submit" class="bg-blue-500 text-white px-4 py-2">Apply</button>
