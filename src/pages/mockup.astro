@@ -2,10 +2,14 @@
 import ShortLinks from "../components/ShortLinks.astro";
 import ShortLinksHover from "../components/ShortLinksHover.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-
+//import "../styles/global.css";
+import "../styles/mockup.css";
 const pageTitle = "mockup page";
 const PageColour = "text-mauve";
 ---
+<html>
+    <head></head>
+    <body class="bg-black text-white">
 <p>Job application page (apply.html)</p>
 <p>
 This page has a form that allows a potential candidate to register their interest in the advertised position. HTML5 data validation should be used to check the user’s input.</p>
@@ -75,6 +79,36 @@ The form will allow a potential applicant to fill in the following:</p>
     </tbody>
 </table>
 
+
+
+<p>All inputs should have labels. All form values, except the "Other Skills" textarea are ‘required’ or have a default value (e.g. select and checkbox inputs). The user should not be able to submit the form if any of these required fields are blank or incorrectly filled.</p>
+<h3>Data Submission to Server</h3>
+<p>The form should have a submit button labelled “Apply”. When this button is clicked the name-values from the associated form should be sent to the server using the post http method. The server action address is https://mercury.swin.edu.au/it000000/formtest.php. The server will then just echo back the name value pairs to the client. While nothing will be stored on the server in this part of the assignment (we will do this in Part 2) this will allow the form submission to be tested.</p>
+
+<p>Apply.html: must have a display factor (e.g., flex or grid), use margin and padding, with inputs, labels and button styling.</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="bg-black text-white p-4">
+<header>
+    <a class="text-blue underline hover:text-sky" href="#">comapny name</a>
+    <a class="text-blue underline hover:text-sky" href="#">home</a>
+    <a class="text-blue underline hover:text-sky" href="#">about</a>
+    <a class="text-blue underline hover:text-sky" href="#">jobs</a>
+    <a class="text-blue underline hover:text-sky" href="#">apply</a>
+</header>
+<div class="flex flex-col items-center">
 <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post" class="flex flex-col gap-4 p-4 border border-black prose-">
     <label>
         Job reference number:
@@ -135,7 +169,7 @@ The form will allow a potential applicant to fill in the following:</p>
 
     <label>
         Postcode:
-        <input type="text" name="postcode" pattern="\d{4}" class="border border-black" required />
+        <input type="text" name="postcode" class="border border-black" required />
     </label>
 
     <label>
@@ -162,13 +196,9 @@ The form will allow a potential applicant to fill in the following:</p>
 
     <button type="submit" class="bg-blue-500 text-white px-4 py-2">Apply</button>
 </form>
+</div>
+</div>
 
 
-<p>All inputs should have labels. All form values, except the "Other Skills" textarea are ‘required’ or have a default value (e.g. select and checkbox inputs). The user should not be able to submit the form if any of these required fields are blank or incorrectly filled.</p>
-<h3>Data Submission to Server</h3>
-<p>The form should have a submit button labelled “Apply”. When this button is clicked the name-values from the associated form should be sent to the server using the post http method. The server action address is https://mercury.swin.edu.au/it000000/formtest.php. The server will then just echo back the name value pairs to the client. While nothing will be stored on the server in this part of the assignment (we will do this in Part 2) this will allow the form submission to be tested.</p>
-
-<p>Apply.html: must have a display factor (e.g., flex or grid), use margin and padding, with inputs, labels and button styling.</p>
-
-
-
+</body>
+</html>
