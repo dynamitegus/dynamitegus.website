@@ -1,0 +1,87 @@
+---
+import ShortLinks from "../components/ShortLinks.astro";
+import ShortLinksHover from "../components/ShortLinksHover.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "mockup page";
+const PageColour = "text-mauve";
+---
+<p>Job application page (apply.html)</p>
+<p>
+This page has a form that allows a potential candidate to register their interest in the advertised position. HTML5 data validation should be used to check the user’s input.</p>
+<p>
+The form will allow a potential applicant to fill in the following:</p>
+
+
+<table class="border-solid border-2 border-black">
+    <thead class="prose-th:border-solid prose-th:border-2 prose-th:border-black">
+        <tr>
+            <th>Field</th>
+            <th>Format Requirement</th>
+        </tr>
+    </thead>
+    <tbody class="prose-td:border-solid prose-td:border-2 prose-td:border-black">
+        <tr>
+            <td>Job reference number</td>
+            <td>Drop down selection including all jobs ref numbers</td>
+        </tr>
+        <tr>
+            <td>First name</td>
+            <td>Max 20 alpha characters</td>
+        </tr>
+        <tr>
+            <td>Last name</td>
+            <td>Max 20 alpha characters</td>
+        </tr>
+        <tr>
+            <td>Date of birth</td>
+            <td>dd/mm/yyyy</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>Radio inputs grouped using a fieldset and legend</td>
+        </tr>
+        <tr>
+            <td>Street Address</td>
+            <td>Max 40 characters</td>
+        </tr>
+        <tr>
+            <td>Suburb/town</td>
+            <td>Max 40 characters</td>
+        </tr>
+        <tr>
+            <td>State</td>
+            <td>Drop down selection from VIC, NSW, QLD, NT, WA, SA, TAS, ACT</td>
+        </tr>
+        <tr>
+            <td>Postcode</td>
+            <td>Exactly 4 digits based on States</td>
+        </tr>
+        <tr>
+            <td>Email address</td>
+            <td>Validate format with regular expression & patterns</td>
+        </tr>
+        <tr>
+            <td>Phone number</td>
+            <td>8 to 12 digits, or spaces</td>
+        </tr>
+        <tr>
+            <td>Required technical list</td>
+            <td>Checkbox inputs</td>
+        </tr>
+        <tr>
+            <td>Other skills</td>
+            <td>Textarea</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<p>All inputs should have labels. All form values, except the "Other Skills" textarea are ‘required’ or have a default value (e.g. select and checkbox inputs). The user should not be able to submit the form if any of these required fields are blank or incorrectly filled.</p>
+<h3>Data Submission to Server</h3>
+<p>The form should have a submit button labelled “Apply”. When this button is clicked the name-values from the associated form should be sent to the server using the post http method. The server action address is https://mercury.swin.edu.au/it000000/formtest.php. The server will then just echo back the name value pairs to the client. While nothing will be stored on the server in this part of the assignment (we will do this in Part 2) this will allow the form submission to be tested.</p>
+
+<p>Apply.html: must have a display factor (e.g., flex or grid), use margin and padding, with inputs, labels and button styling.</p>
+
+
+
