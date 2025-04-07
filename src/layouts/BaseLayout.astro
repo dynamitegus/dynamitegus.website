@@ -3,7 +3,7 @@ import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 const { pageTitle, PageColour } = Astro.props;
-import '@fontsource/inria-sans';
+
 ---
 
 <html lang="en" class="bg-base text-text">
@@ -14,7 +14,7 @@ import '@fontsource/inria-sans';
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body class="sm:mx-5 md:mx-20 lg:mx-40 xl:mx-70 2xl:mx-90 my-0 px-4 bg-center h-screen font-inria-sans">
+  <body class="sm:mx-5 md:mx-20 lg:mx-40 xl:mx-70 2xl:mx-90 my-0 px-4 bg-center h-screen">
     <Header />
     <div class="md:px-20 md:px-30">
       <h1 class=`text-5xl sm:mx-4 my-10 ${PageColour}`>{pageTitle}</h1>

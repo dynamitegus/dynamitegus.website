@@ -53,6 +53,9 @@ export default {
     		},
 			fontFamily: {
 				sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+				bold: ['var(--font-bold)', 'system-ui', 'sans-serif'],
+				light: ['var(--font-light)', 'system-ui', 'sans-serif'],
+				
 			}
     	},
     	colors: {
