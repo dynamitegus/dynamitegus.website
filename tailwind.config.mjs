@@ -52,7 +52,7 @@ export default {
     			}
     		},
 			fontFamily: {
-				inria: ['inria-sans'],
+				sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
 			}
     	},
     	colors: {

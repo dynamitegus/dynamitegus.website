@@ -1,5 +1,6 @@
-@import "@catppuccin/palette/css/catppuccin.css";
 @import '@fontsource/inria-sans';
+@import "@catppuccin/palette/css/catppuccin.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,6 +37,7 @@
     --mantle: var(--ctp-latte-mantle);
     --crust: var(--ctp-latte-crust);
     --accent: var(--pink);
+    --font-sans: 'Inria Sans', sans-serif;
     }
   .dark {
     --rosewater: var(--ctp-mocha-rosewater);
@@ -66,5 +68,6 @@
     --mantle: var(--ctp-mocha-mantle);
     --crust: var(--ctp-mocha-crust);
     --accent: var(--pink);
+    --font-sans: 'Inria Sans', sans-serif;
   }
 }
