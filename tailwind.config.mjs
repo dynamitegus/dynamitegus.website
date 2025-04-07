@@ -50,7 +50,13 @@ export default {
     				'4': 'hsl(var(--chart-4))',
     				'5': 'hsl(var(--chart-5))'
     			}
-    		}
+    		},
+			fontFamily: {
+				sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+				bold: ['var(--font-bold)', 'system-ui', 'sans-serif'],
+				light: ['var(--font-light)', 'system-ui', 'sans-serif'],
+				
+			}
     	},
     	colors: {
     		text: 'var(--text)',

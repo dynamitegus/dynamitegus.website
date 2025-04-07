@@ -1,5 +1,6 @@
 ---
 import ThemeIcon from "./ThemeIcon.astro";
+import '@fontsource-variable/roboto';
 ---
 <div class="w-full top-20 left-12 bg-base text-base m-0 mt-4">
     <ThemeIcon />
@@ -9,3 +10,10 @@ import ThemeIcon from "./ThemeIcon.astro";
 <a class="bg-green    hover:text-green    hover:bg-mantle hover:rounded-full rounded-full inline-block text-center py-2.5 px-4 mr-3 mb-3 no-underline text-lg font-bold uppercase" href="/tags">Tags</a>
 <a class="bg-sapphire hover:text-sapphire hover:bg-mantle hover:rounded-full rounded-full inline-block text-center py-2.5 px-4 mr-3 mb-3 no-underline text-lg font-bold uppercase" href="/projects/">Projects</a>
 </div>
+
+<style>
+a {
+  font-family: 'Roboto Variable', sans-serif;
+  font-weight: 800;
+}
+</style>
