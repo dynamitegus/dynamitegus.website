@@ -10,9 +10,9 @@ import {
 import { HoverCardComponent } from "../../components/HoverCardComponent.jsx";
 import { Button } from "@/components/ui/button";
 import "../../styles/global.css";
-const pageTitle = "shadcn Playground";
+const pageTitle = "anime js Playground";
 const PageColour = "text-sapphire";
-import { Animation } from "../../components/Animation.jsx";
+import Animation from "../../components/Animation.jsx";
 
 ---
 
@@ -20,7 +20,6 @@ import { Animation } from "../../components/Animation.jsx";
 
     <h1 class=`text-5xl sm:mx-4 my-10 ${PageColour}`>womp</h1>
 
-
-    <Animation />
+    <Animation client:load />
 
 </BaseLayout>
