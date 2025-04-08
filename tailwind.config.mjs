@@ -85,6 +85,7 @@ export default {
     		surface1: 'var(--surface1)',
     		surface0: 'var(--surface0)',
     		base: 'var(--base)',
+			invertbg: 'var(--invertbg)',
     		mantle: 'var(--mantle)',
     		crust: 'var(--crust)'
     	}
