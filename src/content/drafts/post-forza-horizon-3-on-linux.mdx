@@ -1,0 +1,38 @@
+---
+title: 'How i ran forza gorizon 3 on linux'
+pubDate: 2025-03-21T13:27:42.000Z
+modDate: 2025-03-21T13:27:42.000Z
+description: 'i try to play video game'
+author: 'dynamitegus'
+tags: ["forza horizon 3", "gaming", "linux"]
+featured: true
+
+
+---
+export const PageColour = "text-peach"
+import { Image } from 'astro:assets';
+import ShortLinksHover from '/src/components/ShortLinksHover.astro';
+import { Code } from 'astro-expressive-code/components'
+
+after downloading the file a week ago and then extracting it i pull the basic 
+```shell frame="terminal" showLineNumbers collapse={2-14, 29-64} wrap {16, 18-19, 27, 29, 31-32, 40, 42, 44-45, 53} 
+wine Setup_FH3.exe
+```
+i get into the provided script that the script gave me and get these errors
+```shell frame="terminal" showLineNumbers collapse={2-14, 29-64} wrap {16, 18-19, 27, 29, 31-32, 40, 42, 44-45, 53} 
+0150:fixme:powershell:wmain stub.                                                                                                                       
+0150:fixme:powershell:wmain argv[0] L"powershell"                                                                                                       
+0150:fixme:powershell:wmain argv[1] L"Add-AppxPackage"                                                                                                  
+0150:fixme:powershell:wmain argv[2] L"'C:\\users\\angus\\AppData\\Local\\Temp\\9bcd.tmp\\9bce.tmp\\AppxManifest.xml'"                                   
+0150:fixme:powershell:wmain argv[3] L"-Register"
+```
+
+## so off to lutris i go:
+running the intstaller just spamed the output so i think i will just run it in powershell as this was made for windows
+or atleast i will install it in wine
+this appears to have install powershell
+so now we run the script again
+
+ahhh i should have read the readme 9i need to run installer.bat or whatever its called
+ 
+

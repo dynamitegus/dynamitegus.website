@@ -9,10 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.1.1",
-    "@astrojs/react": "^4.2.1",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/tailwind": "^6.0.0",
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/tailwind": "^6.0.2",
     "@catppuccin/palette": "^1.7.1",
     "@expressive-code/plugin-collapsible-sections": "^0.40.2",
     "@expressive-code/plugin-line-numbers": "^0.40.2",
@@ -25,7 +25,7 @@
     "@tanstack/react-table": "^8.21.2",
     "@types/react": "^19.0.11",
     "@types/react-dom": "^19.0.4",
-    "astro": "^5.4.1",
+    "astro": "^5.10.1",
     "astro-expressive-code": "^0.40.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
