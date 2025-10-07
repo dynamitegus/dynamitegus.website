@@ -59,6 +59,8 @@ export default {
 			}
     	},
     	colors: {
+			lime: 'var(--lime)',
+			magenta: 'var(--magenta)',
     		text: 'var(--text)',
     		background: 'var(--base)',
     		accent: 'var(--pink)',
