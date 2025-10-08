@@ -20,7 +20,7 @@ export const HoverCardComponent = ({
     <HoverCard>
       <HoverCardTrigger asChild>
         <Button asChild>
-          <a class={`hover:underline ${ PageColour }`} href={ Destination }>{ Trigger }</a>
+          <a class={`${PageColour} bg-left-bottom bg-gradient-to-r from-${PageColour.slice(4)} to-${PageColour.slice(4)} bg-[length:1rem_2px] bg-no-repeat hover:bg-[length:100%_2px] transition-all duration-350 ease-out`} href={ Destination }>{ Trigger }</a>
         </Button>
       </HoverCardTrigger>
       <HoverCardContent className="w-80 bg-mantle border-none rounded-xl">
