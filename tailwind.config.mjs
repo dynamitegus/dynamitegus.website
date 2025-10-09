@@ -103,6 +103,8 @@ export default {
 		  require('@tailwindcss/typography'),
         require("tailwindcss-animate")
     ],
-
+	safelist: [
+    { pattern: /^(from|to|bg)-(magenta|lime|peach|green|maroon)$/ }
+  ],
 	   
 }
