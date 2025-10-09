@@ -66,73 +66,39 @@
 
 @layer base {
   :root {
-    --rosewater: var(--ctp-latte-rosewater);
-    --flamingo: var(--ctp-latte-flamingo);
-    --pink: var(--ctp-latte-pink);
-    --mauve: var(--ctp-latte-mauve);
-    --red: var(--ctp-latte-red);
-    --maroon: var(--ctp-latte-maroon);
-    --peach: var(--ctp-latte-peach);
-    --yellow: var(--ctp-latte-yellow);
-    --green: var(--ctp-latte-green);
-    --teal: var(--ctp-latte-teal);
-    --sky: var(--ctp-latte-sky);
-    --sapphire: var(--ctp-latte-sapphire);
-    --blue: var(--ctp-latte-blue);
-    --lavender: var(--ctp-latte-lavender);
-    --text: var(--ctp-latte-text);
-    --subtext1: var(--ctp-latte-subtext1);
-    --subtext0: var(--ctp-latte-subtext0);
-    --overlay2: var(--ctp-latte-overlay2);
-    --overlay1: var(--ctp-latte-overlay1);
-    --overlay0: var(--ctp-latte-overlay0);
-    --surface2: var(--ctp-latte-surface2);
-    --surface1: var(--ctp-latte-surface1);
-    --surface0: var(--ctp-latte-surface0);
-    --base: var(--ctp-latte-base);
-    --background: var(--ctp-latte-base);
-    --invertbg: var(--ctp-mocha-base);
-    --mantle: var(--ctp-latte-mantle);
-    --crust: var(--ctp-latte-crust);
-    --accent: var(--pink);
+  --rosewater: #dc8a78;
+  --flamingo: #dd7878;
+  --pink: #ea76cb;
+  --magenta: #ff00ff;
+  --mauve: #8839ef;
+  --red: #d20f39;
+  --maroon: #e64553;
+  --peach: #fe640b;
+  --yellow: #df8e1d;
+  --green: #40a02b;
+  --lime: #0f0;
+  --teal: #179299;
+  --sky: #04a5e5;
+  --sapphire: #209fb5;
+  --blue: #1e66f5;
+  --lavender: #7287fd;
+  --text: #ffffff;
+  --subtext1: #5c5f77;
+  --subtext0: #b8b8b8;
+  --overlay2: #949494;
+  --overlay1: #8c8fa1;
+  --overlay0: #9ca0b0;
+  --surface2: #acb0be;
+  --surface1: #bcc0cc;
+  --surface0: #ccd0da;
+  --base: #000;
+  --mantle: #111111;
+  --crust: #242424;
+
+
     --font-sans: 'Inria Sans', sans-serif;
     --font-bold: 'Inria Sans Bold', sans-serif;
     --font-light: 'Inria Sans 300', sans-serif;
 
     }
-  .dark {
-    --rosewater: var(--ctp-mocha-rosewater);
-    --flamingo: var(--ctp-mocha-flamingo);
-    --pink: var(--ctp-mocha-pink);
-    --mauve: var(--ctp-mocha-mauve);
-    --red: var(--ctp-mocha-red);
-    --maroon: var(--ctp-mocha-maroon);
-    --peach: var(--ctp-mocha-peach);
-    --yellow: var(--ctp-mocha-yellow);
-    --green: var(--ctp-mocha-green);
-    --teal: var(--ctp-mocha-teal);
-    --sky: var(--ctp-mocha-sky);
-    --sapphire: var(--ctp-mocha-sapphire);
-    --blue: var(--ctp-mocha-blue);
-    --lavender: var(--ctp-mocha-lavender);
-    --text: var(--ctp-mocha-text);
-    --subtext1: var(--ctp-mocha-subtext1);
-    --subtext0: var(--ctp-mocha-subtext0);
-    --overlay2: var(--ctp-mocha-overlay2);
-    --overlay1: var(--ctp-mocha-overlay1);
-    --overlay0: var(--ctp-mocha-overlay0);
-    --surface2: var(--ctp-mocha-surface2);
-    --surface1: var(--ctp-mocha-surface1);
-    --surface0: var(--ctp-mocha-surface0);
-    --base: var(--ctp-mocha-base);
-    --background: var(--ctp-mocha-base);
-    --invertbg: var(--ctp-latte-base);
-    --mantle: var(--ctp-mocha-mantle);
-    --crust: var(--ctp-mocha-crust);
-    --accent: var(--pink);
-    --font-sans: 'Inria Sans', sans-serif;
-    --font-bold: 'Inria Sans Bold', sans-serif;
-    --font-light: 'Inria Sans 300', sans-serif;
-    
-  }
 }

@@ -59,6 +59,8 @@ export default {
 			}
     	},
     	colors: {
+			lime: 'var(--lime)',
+			magenta: 'var(--magenta)',
     		text: 'var(--text)',
     		background: 'var(--base)',
     		accent: 'var(--pink)',
@@ -101,6 +103,8 @@ export default {
 		  require('@tailwindcss/typography'),
         require("tailwindcss-animate")
     ],
-
+	safelist: [
+    { pattern: /^(from|to|bg)-(magenta|lime|peach|green|maroon)$/ }
+  ],
 	   
 }
