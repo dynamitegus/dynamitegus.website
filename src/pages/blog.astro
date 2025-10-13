@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 import { getCollection } from "astro:content";
 const pageTitle = 'Blog';
-const PageColour = "text-peach";
+const PageColour = "text-magenta";
 
 //const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 const allPosts = await getCollection("blog");
@@ -13,6 +13,7 @@ const sortedPosts = allPosts.sort((a, b) => {
 ---
   <BaseLayout pageTitle={pageTitle} PageColour={PageColour}>
     <p>here is list of blog posts<br> go wild</p>
+    <p><a class=`${PageColour} underline` href="/tags">Here are all the tags aswell</a></p>
     <ul>
       {sortedPosts.map((post) => <BlogPost id=`/posts/${post.id}` title={post.data.title} description={post.data.description} pubDate={Date.parse(post.data.pubDate)}/>)}
     </ul>
