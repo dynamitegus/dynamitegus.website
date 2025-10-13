@@ -1,0 +1,19 @@
+---
+import ShortLinks from "./ShortLinks.astro";
+
+const { 
+    PageColour,
+    link,
+    icon,
+    platform,
+    } = Astro.props;
+
+const ColourPageColour = PageColour.slice(5)
+---
+<div class="inline">
+<img class="inline w-20" src={icon}><a class=`text-text bg-left-bottom bg-gradient-to-r 
+from-text to-text 
+bg-[length:1rem_2px] bg-no-repeat hover:bg-[length:100%_2px] 
+transition-all duration-350 ease-out
+text-4xl` 
+href=`${link}`><span class="inline">{platform}</span></a></div>
