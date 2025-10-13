@@ -3,6 +3,7 @@ import ShortLinks from "../components/ShortLinks.astro";
 import ShortLinksHover from "../components/ShortLinksHover.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TypingTextDemo from "../components/TypingTextComponent.tsx";
+import '@fontsource/ubuntu-mono';
 
 const pageTitle = "Socials";
 const PageColour = "text-lime";
@@ -14,7 +15,13 @@ const PageColour = "text-lime";
       <img class="bg-[black] rounded-3xl w-60 items-center m-auto" src="/favicon.svg" /><br>
       <h2 class="text-6xl my-2 text-magenta text-center">dynamitegus</h2>
       
-      <TypingTextDemo client:load/>
+      <span class="monospace_font"><TypingTextDemo client:load/></span>
+      <style>
+        .monospace_font {
+          font-family: 'Ubuntu Mono', monospace;
+          font-weight: bold;
+        }
+      </style>
     </div>
   </div>
 </BaseLayout>
