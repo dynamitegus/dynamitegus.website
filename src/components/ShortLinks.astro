@@ -1,5 +1,5 @@
 ---
 const { PageColour, LD, LN } = Astro.props;
-const ColourPageColour = PageColour.slice(4)
+const ColourPageColour = PageColour.slice(5)
 ---
 <a class=`${PageColour} bg-left-bottom bg-gradient-to-r from-${ColourPageColour} to-${ColourPageColour} bg-[length:1rem_2px] bg-no-repeat hover:bg-[length:100%_2px] transition-all duration-350 ease-out` href=`${LD}`>{LN}</a>

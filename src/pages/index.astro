@@ -7,6 +7,7 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import BlogPost from "@/components/BlogPost.astro";
 import { getCollection } from "astro:content";
+import ShortLinks from "@/components/ShortLinks.astro";
 const allPosts = await getCollection("blog");
 const filteredPost = allPosts.filter((post) => post.data.featured === true);
 const featuredPost = filteredPost[0];
@@ -30,10 +31,9 @@ const featuredPost = filteredPost[0];
       <div class="">
         <Header />
         <h2 class="text-3xl my-2 text-magenta pt-10 md:pt-20 lg:pt-40">Welcome to dynamitegus.au</h2>
-        <div class="pl-8 pb-1"><li class="text-2xl list-disc">Formerly dynamitegus.org</li></div>
         <p>This is my small little project website that I work on for fun.</p>
-        <p>It's just a little goofy and if you can take a few light hearted jokes you'll be right at home.</p>
-        <p>And there might be a few little easter eggs here and there.</p>
+        <p class="text-3xl font-mono pt-5 text-center"><ShortLinks PageColour={PageColour} LN="Here are my Socials" LD="/socials"/></p>
+
         
       </div>
     </div>

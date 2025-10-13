@@ -1,0 +1,20 @@
+---
+import ShortLinks from "../components/ShortLinks.astro";
+import ShortLinksHover from "../components/ShortLinksHover.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TypingTextDemo from "../components/TypingTextComponent.tsx";
+
+const pageTitle = "Socials";
+const PageColour = "text-lime";
+---
+
+<BaseLayout pageTitle="" PageColour={PageColour}>
+  <div class="items-centern inset-x-0">
+    <div class="grid grid-cols-1 bg-center text-center mx-auto w-120">
+      <img class="bg-[black] rounded-3xl w-60 items-center p-auto" src="/favicon.svg" /><br>
+      <h2 class="text-4xl my-2 text-magenta text-center">dynamitegus</h2>
+      <p>A Software Dev, An Engineer and what ever am interested in at the moment.</p>
+      <TypingTextDemo client:load/>
+    </div>
+  </div>
+</BaseLayout>
