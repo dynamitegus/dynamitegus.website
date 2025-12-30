@@ -24,7 +24,7 @@ flatpak remote-add --user --if-not-exists flatpak https://flathub.org/repo/flath
 ## Ok Cool time for the actually things
 ### Git
 ```shell frame="terminal"
-sudo echo "dev-vcs/git +curl +webdav +perl keyring rust" >> /etc/portage/package.use/git
+sudo echo "dev-vcs/git +curl +webdav +perl keyring rust" >> sudo tee/etc/portage/package.use/git
 sudo emerge -a dev-vcs/git
 ```
 ### Bitwarden
@@ -33,9 +33,9 @@ flatpak install flathub com.bitwarden.desktop
 ```
 ### VSCode
 ```shell frame="terminal"
-sudo echo "app-editors/vscode wayland" >> /etc/portage/package.use/vscode
+sudo echo "app-editors/vscode wayland" >> sudo tee /etc/portage/package.use/vscode
 # this next one might not be nessesary depending on what licenses you agreed to when setting up gentoo
-sudo echo "app-editors/vscode Microsoft-vscode" >> /etc/portage/package.license
+sudo echo "app-editors/vscode Microsoft-vscode" >> sudo tee /etc/portage/package.license
 sudo emerge -a app-editors/vscode
 ```
 <ShortLinksHover LN="VSCode Wiki page" LD="https://wiki.gentoo.org/wiki/Vscode" PageColour={PageColour} Title="VS Code - Gentoo Wiki" Content="VS Code Gentoo Wiki" />
@@ -48,7 +48,7 @@ git config --global user.name "dynamitegus"
 add this line to .\/.config\/fish\/config.fish
 ```shell title="./.config/fish/config.fish"
 # bitwarden ssh
-set --export SSH_AUTH_SOCK "/home/angus/.bitwarden-ssh-agent.sock"
+set --export SSH_AUTH_SOCK "/home/angus/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
 ```
 ## you then need to enable the ssh agent in settings in the bitwarden app
 Check that it works:
@@ -58,7 +58,7 @@ ssh-add -L
 ssh -T git@github.com
 ```
 Enable Gits signing
-you will need to put your public key in the path below 
+you will need to put your public key in the path below and you will need to add the name of the key at the end of the file
 ```shell frame="terminal"
 git config --global gpg.format ssh
 git config --global user.signingkey /home/angus/.config/githubsshpublic.pub
