@@ -1,0 +1,67 @@
+---
+title: 'i need to setup my dev enviroment again'
+pubDate: 2025-12-30T02:00:00.000Z
+modDate: 2025-12-30T01:09:31.000Z
+description: 'felt like a good oppotunity to do it the wrong way instead of learning ansible or setting up a useful script.'
+author: 'dynamitegus'
+tags: ["dev", "computer", "im-a-lazy-shmuck"]
+featured: false
+---
+export const PageColour = "text-magenta"
+import { Image } from 'astro:assets';
+import ShortLinksHover from '/src/components/ShortLinksHover.astro';
+import { Code } from 'astro-expressive-code/components'
+
+So this is the easyiest way i have to write down my process of setting up my developer enviroment, thats VSCode and Git, with verification. At somepoint I want to move away from github to either codeberg or selfhosted forgejo but thats a later problem.
+if you are not me and are following this yourself you will need to change stuff that is specific to me
+### Things to install.
+- Git, VSCode, Bitwarden
+- Things I will need to have installed: flatpak.
+```shell frame="terminal"
+sudo emerge -a sys-apps/flatpak
+flatpak remote-add --user --if-not-exists flatpak https://flathub.org/repo/flathub.flatpakrepo
+```
+## Ok Cool time for the actually things
+### Git
+```shell frame="terminal"
+sudo echo "dev-vcs/git +curl +webdav +perl keyring rust" >> /etc/portage/package.use/git
+sudo emerge -a dev-vcs/git
+```
+### Bitwarden
+```shell frame="terminal"
+flatpak install flathub com.bitwarden.desktop
+```
+### VSCode
+```shell frame="terminal"
+sudo echo "app-editors/vscode wayland" >> /etc/portage/package.use/vscode
+# this next one might not be nessesary depending on what licenses you agreed to when setting up gentoo
+sudo echo "app-editors/vscode Microsoft-vscode" >> /etc/portage/package.license
+sudo emerge -a app-editors/vscode
+```
+<ShortLinksHover LN="VSCode Wiki page" LD="https://wiki.gentoo.org/wiki/Vscode" PageColour={PageColour} Title="VS Code - Gentoo Wiki" Content="VS Code Gentoo Wiki" />
+# setup time :joy:
+add email and user to git
+```shell frame="terminal"
+git config --global user.email "dynamitegus@dynamitegus.au"
+git config --global user.name "dynamitegus"
+```
+add this line to .\/.config\/fish\/config.fish
+```shell title="./.config/fish/config.fish"
+# bitwarden ssh
+set --export SSH_AUTH_SOCK "/home/angus/.bitwarden-ssh-agent.sock"
+```
+## you then need to enable the ssh agent in settings in the bitwarden app
+Check that it works:
+```shell frame="terminal"
+ssh-add -L
+# and 
+ssh -T git@github.com
+```
+Enable Gits signing
+you will need to put your public key in the path below 
+```shell frame="terminal"
+git config --global gpg.format ssh
+git config --global user.signingkey /home/angus/.config/githubsshpublic.pub
+```
+intheory that should work. i might add other configs at some point but we'll see.
+
