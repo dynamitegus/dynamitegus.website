@@ -1,4 +1,6 @@
 # dyamitegus.org repository
+I might be moving to codeberg so i will be trying it out here: [https://codeberg.org/dynamitegus/dynamitegus.website
+](https://codeberg.org/dynamitegus/dynamitegus.website)
 
 My very cool website that I enjoy working on.
 Built with Astro and Tailwind.
